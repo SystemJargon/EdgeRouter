@@ -1,17 +1,3 @@
-Replace to your own requirements any of the following:
-
-
-```your_vpn_route```
-
-```YourVPN```
-
-```VPN-Provider```
-
-```192.168.5.0/24```
-
-Copy and paste as your configuration the below
-
-```
 configure
 set interfaces openvpn vtun0 config-file /config/auth/vpn.ovpn
 set interfaces openvpn vtun0 description 'VPN-Provider'
@@ -24,6 +10,6 @@ set service nat rule 5001 description 'YourVPN'
 set service nat rule 5001 log disable
 set service nat rule 5001 outbound-interface vtun0
 set service nat rule 5001 type masquerade
-commit; save;
+commit
+save
 exit
-```
